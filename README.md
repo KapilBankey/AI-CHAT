@@ -2,7 +2,7 @@ CHAT AI
 Welcome to CHAT AI – a responsive, real-time chat application built to provide intelligent and instant responses, powered by AI.
  
 
-Live Demo: https://aichatapplication.vercel.app/
+Live Demo: https://ai-chat-beryl-iota.vercel.app/
 
 🚀 Features
 
