@@ -14,8 +14,10 @@ function App() {
         <MdScreenSearchDesktop />
       </center>
     );
+    const apiKey = import.meta.env.VITE_API_KEY;
     const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAAhwW9-InaSreoK8ER-05O5ezOxVNq8GY",
+      url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
+
       method: "post",
       data: { contents: [{ parts: [{ text: question }] }] },
     });
