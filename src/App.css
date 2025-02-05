@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 600px;
   text-align: center;
+  background:#F4F7FC;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Heading */
+h1 {
+  font-size: 24px;
+  color:#007BFF;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:#007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056B3;
+}
+
+/* Answer container with proper text wrapping */
+.result-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: #EEF1F7;
+  border-radius: 5px;
+  min-height: 50px;
+  max-height: 300px;
+  overflow-y: auto; /* Enables scrolling if content is too long */
+  text-align: left;
+  border: 1px solid #ccc;
+
+  /* Fix for long text wrapping inside the box */
+  white-space: pre-wrap; /* Preserves formatting but allows wrapping */
+  word-wrap: break-word; /* Ensures long words break properly */
+  overflow-wrap: break-word; /* Breaks long words if needed */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  textarea {
+    height: 120px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .result-container {
+    font-size: 14px;
+    max-height: 250px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 480px) {
+  textarea {
+    height: 100px;
+    font-size: 14px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .result-container {
+    font-size: 14px;
+    max-height: 200px;
+  }
 }
